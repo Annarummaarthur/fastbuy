@@ -1,0 +1,328 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "FastBuy" [level=1]
+- main:
+  - button "Voir le panier"
+  - img "T-shirt Coton Bio Blanc"
+  - heading "T-shirt Coton Bio Blanc" [level=2]
+  - paragraph: 25.00 €
+  - paragraph: "Stock : 169"
+  - button "Ajouter au panier"
+  - img "T-shirt Imprimé Graphique 'Voyage'"
+  - heading "T-shirt Imprimé Graphique 'Voyage'" [level=2]
+  - paragraph: 35.50 €
+  - paragraph: "Stock : 120"
+  - button "Ajouter au panier"
+  - img "T-shirt Rayures Marines"
+  - heading "T-shirt Rayures Marines" [level=2]
+  - paragraph: 29.99 €
+  - paragraph: "Stock : 150"
+  - button "Ajouter au panier"
+  - img "T-shirt Col V Basique Noir"
+  - heading "T-shirt Col V Basique Noir" [level=2]
+  - paragraph: 19.00 €
+  - paragraph: "Stock : 250"
+  - button "Ajouter au panier"
+  - img "T-shirt Sport Anti-Transpirant"
+  - heading "T-shirt Sport Anti-Transpirant" [level=2]
+  - paragraph: 40.00 €
+  - paragraph: "Stock : 100"
+  - button "Ajouter au panier"
+  - img "T-shirt Manches Longues Gris"
+  - heading "T-shirt Manches Longues Gris" [level=2]
+  - paragraph: 32.00 €
+  - paragraph: "Stock : 180"
+  - button "Ajouter au panier"
+  - img "T-shirt Vintage Délavé Noir"
+  - heading "T-shirt Vintage Délavé Noir" [level=2]
+  - paragraph: 28.50 €
+  - paragraph: "Stock : 90"
+  - button "Ajouter au panier"
+  - img "T-shirt Col Rond Côtelé Beige"
+  - heading "T-shirt Col Rond Côtelé Beige" [level=2]
+  - paragraph: 26.00 €
+  - paragraph: "Stock : 130"
+  - button "Ajouter au panier"
+  - img "T-shirt Uni Vert Sapin"
+  - heading "T-shirt Uni Vert Sapin" [level=2]
+  - paragraph: 22.00 €
+  - paragraph: "Stock : 160"
+  - button "Ajouter au panier"
+  - img "T-shirt Coupe Loose Blanc"
+  - heading "T-shirt Coupe Loose Blanc" [level=2]
+  - paragraph: 30.00 €
+  - paragraph: "Stock : 110"
+  - button "Ajouter au panier"
+  - img "T-shirt Tie-Dye Multicolore"
+  - heading "T-shirt Tie-Dye Multicolore" [level=2]
+  - paragraph: 45.00 €
+  - paragraph: "Stock : 80"
+  - button "Ajouter au panier"
+  - img "T-shirt Henley Boutonné"
+  - heading "T-shirt Henley Boutonné" [level=2]
+  - paragraph: 38.00 €
+  - paragraph: "Stock : 95"
+  - button "Ajouter au panier"
+  - img "T-shirt Oversize avec Poche"
+  - heading "T-shirt Oversize avec Poche" [level=2]
+  - paragraph: 33.00 €
+  - paragraph: "Stock : 140"
+  - button "Ajouter au panier"
+  - img "T-shirt à Motifs Géométriques"
+  - heading "T-shirt à Motifs Géométriques" [level=2]
+  - paragraph: 37.00 €
+  - paragraph: "Stock : 70"
+  - button "Ajouter au panier"
+  - img "T-shirt Basique Bleu Marine"
+  - heading "T-shirt Basique Bleu Marine" [level=2]
+  - paragraph: 19.00 €
+  - paragraph: "Stock : 220"
+  - button "Ajouter au panier"
+  - img "T-shirt Col Montant Noir"
+  - heading "T-shirt Col Montant Noir" [level=2]
+  - paragraph: 30.00 €
+  - paragraph: "Stock : 100"
+  - button "Ajouter au panier"
+  - img "T-shirt à Manches Courtes Enfant"
+  - heading "T-shirt à Manches Courtes Enfant" [level=2]
+  - paragraph: 15.00 €
+  - paragraph: "Stock : 300"
+  - button "Ajouter au panier"
+  - img "T-shirt Slim Fit Kaki"
+  - heading "T-shirt Slim Fit Kaki" [level=2]
+  - paragraph: 24.00 €
+  - paragraph: "Stock : 140"
+  - button "Ajouter au panier"
+  - img "T-shirt sans Manches Sport"
+  - heading "T-shirt sans Manches Sport" [level=2]
+  - paragraph: 28.00 €
+  - paragraph: "Stock : 110"
+  - button "Ajouter au panier"
+  - img "T-shirt Coton Pima Doux"
+  - heading "T-shirt Coton Pima Doux" [level=2]
+  - paragraph: 42.00 €
+  - paragraph: "Stock : 90"
+  - button "Ajouter au panier"
+  - img "T-shirt Logo Brodée"
+  - heading "T-shirt Logo Brodée" [level=2]
+  - paragraph: 31.00 €
+  - paragraph: "Stock : 120"
+  - button "Ajouter au panier"
+  - img "T-shirt à Col Large Femme"
+  - heading "T-shirt à Col Large Femme" [level=2]
+  - paragraph: 27.00 €
+  - paragraph: "Stock : 160"
+  - button "Ajouter au panier"
+  - img "T-shirt Séchage Rapide Randonnée"
+  - heading "T-shirt Séchage Rapide Randonnée" [level=2]
+  - paragraph: 39.00 €
+  - paragraph: "Stock : 85"
+  - button "Ajouter au panier"
+  - img "T-shirt Manches Courtes 'Minimal'"
+  - heading "T-shirt Manches Courtes 'Minimal'" [level=2]
+  - paragraph: 26.00 €
+  - paragraph: "Stock : 170"
+  - button "Ajouter au panier"
+  - img "T-shirt avec Impression Photo Ville"
+  - heading "T-shirt avec Impression Photo Ville" [level=2]
+  - paragraph: 38.00 €
+  - paragraph: "Stock : 95"
+  - button "Ajouter au panier"
+  - img "T-shirt Coton Bio Coloré (Jaune)"
+  - heading "T-shirt Coton Bio Coloré (Jaune)" [level=2]
+  - paragraph: 25.00 €
+  - paragraph: "Stock : 130"
+  - button "Ajouter au panier"
+  - img "T-shirt 'Born to Be Wild' (moto)"
+  - heading "T-shirt 'Born to Be Wild' (moto)" [level=2]
+  - paragraph: 36.00 €
+  - paragraph: "Stock : 60"
+  - button "Ajouter au panier"
+  - img "T-shirt sans Coutures Sport"
+  - heading "T-shirt sans Coutures Sport" [level=2]
+  - paragraph: 45.00 €
+  - paragraph: "Stock : 100"
+  - button "Ajouter au panier"
+  - img "T-shirt Coupe Boxy Crème"
+  - heading "T-shirt Coupe Boxy Crème" [level=2]
+  - paragraph: 32.00 €
+  - paragraph: "Stock : 115"
+  - button "Ajouter au panier"
+  - img "T-shirt Rayures Fines Multicolores"
+  - heading "T-shirt Rayures Fines Multicolores" [level=2]
+  - paragraph: 34.00 €
+  - paragraph: "Stock : 90"
+  - button "Ajouter au panier"
+  - img "T-shirt avec Détail Brodé Floral"
+  - heading "T-shirt avec Détail Brodé Floral" [level=2]
+  - paragraph: 40.00 €
+  - paragraph: "Stock : 70"
+  - button "Ajouter au panier"
+  - img "T-shirt Performance Run Léger"
+  - heading "T-shirt Performance Run Léger" [level=2]
+  - paragraph: 48.00 €
+  - paragraph: "Stock : 80"
+  - button "Ajouter au panier"
+  - img "Pantalon Chino Élastique Noir"
+  - heading "Pantalon Chino Élastique Noir" [level=2]
+  - paragraph: 62.50 €
+  - paragraph: "Stock : 110"
+  - button "Ajouter au panier"
+  - img "Jean Slim Fit Gris Anthracite"
+  - heading "Jean Slim Fit Gris Anthracite" [level=2]
+  - paragraph: 78.00 €
+  - paragraph: "Stock : 95"
+  - button "Ajouter au panier"
+  - img "Pantalon de Jogging Molleton Gris Chiné"
+  - heading "Pantalon de Jogging Molleton Gris Chiné" [level=2]
+  - paragraph: 42.99 €
+  - paragraph: "Stock : 160"
+  - button "Ajouter au panier"
+  - img "Pantalon Cargo Beige Léger"
+  - heading "Pantalon Cargo Beige Léger" [level=2]
+  - paragraph: 68.00 €
+  - paragraph: "Stock : 80"
+  - button "Ajouter au panier"
+  - img "Pantalon de Costume Bleu Nuit"
+  - heading "Pantalon de Costume Bleu Nuit" [level=2]
+  - paragraph: 115.00 €
+  - paragraph: "Stock : 55"
+  - button "Ajouter au panier"
+  - img "Jean Coupe Droite Vintage Bleu"
+  - heading "Jean Coupe Droite Vintage Bleu" [level=2]
+  - paragraph: 72.00 €
+  - paragraph: "Stock : 100"
+  - button "Ajouter au panier"
+  - img "Pantalon en Lin Blanc Cassé"
+  - heading "Pantalon en Lin Blanc Cassé" [level=2]
+  - paragraph: 58.00 €
+  - paragraph: "Stock : 125"
+  - button "Ajouter au panier"
+  - img "Legging de Sport Taille Haute"
+  - heading "Legging de Sport Taille Haute" [level=2]
+  - paragraph: 38.00 €
+  - paragraph: "Stock : 190"
+  - button "Ajouter au panier"
+  - img "Pantalon Velours Côtelé Vert Sapin"
+  - heading "Pantalon Velours Côtelé Vert Sapin" [level=2]
+  - paragraph: 82.00 €
+  - paragraph: "Stock : 70"
+  - button "Ajouter au panier"
+  - img "Jean Noir Ajusté"
+  - heading "Jean Noir Ajusté" [level=2]
+  - paragraph: 69.00 €
+  - paragraph: "Stock : 140"
+  - button "Ajouter au panier"
+  - img "Pantalon de Randonnée Résistant Bleu"
+  - heading "Pantalon de Randonnée Résistant Bleu" [level=2]
+  - paragraph: 95.00 €
+  - paragraph: "Stock : 60"
+  - button "Ajouter au panier"
+  - img "Pantalon Tailleur Femme Marine"
+  - heading "Pantalon Tailleur Femme Marine" [level=2]
+  - paragraph: 85.00 €
+  - paragraph: "Stock : 75"
+  - button "Ajouter au panier"
+  - img "Pantalon en Simili Cuir Marron"
+  - heading "Pantalon en Simili Cuir Marron" [level=2]
+  - paragraph: 119.00 €
+  - paragraph: "Stock : 40"
+  - button "Ajouter au panier"
+  - img "Pantalon Ample Fluide Noir"
+  - heading "Pantalon Ample Fluide Noir" [level=2]
+  - paragraph: 52.00 €
+  - paragraph: "Stock : 105"
+  - button "Ajouter au panier"
+  - img "Jean Skinny Taille Haute Bleu Foncé"
+  - heading "Jean Skinny Taille Haute Bleu Foncé" [level=2]
+  - paragraph: 80.00 €
+  - paragraph: "Stock : 90"
+  - button "Ajouter au panier"
+  - img "Pantalon Chino Blanc Cassé"
+  - heading "Pantalon Chino Blanc Cassé" [level=2]
+  - paragraph: 59.99 €
+  - paragraph: "Stock : 130"
+  - button "Ajouter au panier"
+  - img "Pantalon de Pyjama Coton Rayé"
+  - heading "Pantalon de Pyjama Coton Rayé" [level=2]
+  - paragraph: 28.00 €
+  - paragraph: "Stock : 170"
+  - button "Ajouter au panier"
+  - img "Pantalon de Snowboard Imperméable"
+  - heading "Pantalon de Snowboard Imperméable" [level=2]
+  - paragraph: 160.00 €
+  - paragraph: "Stock : 35"
+  - button "Ajouter au panier"
+  - img "Jean Mom Fit Noir Délavé"
+  - heading "Jean Mom Fit Noir Délavé" [level=2]
+  - paragraph: 76.00 €
+  - paragraph: "Stock : 85"
+  - button "Ajouter au panier"
+  - img "Pantalon de Golf Marine Stretch"
+  - heading "Pantalon de Golf Marine Stretch" [level=2]
+  - paragraph: 92.00 €
+  - paragraph: "Stock : 60"
+  - button "Ajouter au panier"
+  - img "Pantalon de Sport Fuselé"
+  - heading "Pantalon de Sport Fuselé" [level=2]
+  - paragraph: 55.00 €
+  - paragraph: "Stock : 120"
+  - button "Ajouter au panier"
+  - img "Pantalon en Soie Fluide Rose Poudré"
+  - heading "Pantalon en Soie Fluide Rose Poudré" [level=2]
+  - paragraph: 130.00 €
+  - paragraph: "Stock : 45"
+  - button "Ajouter au panier"
+  - img "Jean Wide Leg Brut"
+  - heading "Jean Wide Leg Brut" [level=2]
+  - paragraph: 85.00 €
+  - paragraph: "Stock : 70"
+  - button "Ajouter au panier"
+  - img "Pantalon de Yoga Confortable"
+  - heading "Pantalon de Yoga Confortable" [level=2]
+  - paragraph: 40.00 €
+  - paragraph: "Stock : 150"
+  - button "Ajouter au panier"
+  - img "Pantalon en Flanelle à Carreaux"
+  - heading "Pantalon en Flanelle à Carreaux" [level=2]
+  - paragraph: 70.00 €
+  - paragraph: "Stock : 80"
+  - button "Ajouter au panier"
+  - img "Pantalon Cargo Noir Technique"
+  - heading "Pantalon Cargo Noir Technique" [level=2]
+  - paragraph: 88.00 €
+  - paragraph: "Stock : 65"
+  - button "Ajouter au panier"
+  - img "Pantalon de Sport en Molleton Noir"
+  - heading "Pantalon de Sport en Molleton Noir" [level=2]
+  - paragraph: 45.00 €
+  - paragraph: "Stock : 140"
+  - button "Ajouter au panier"
+  - img "Pantalon de Pluie Léger"
+  - heading "Pantalon de Pluie Léger" [level=2]
+  - paragraph: 75.00 €
+  - paragraph: "Stock : 90"
+  - button "Ajouter au panier"
+  - img "Pantalon Chino Kaki Classique"
+  - heading "Pantalon Chino Kaki Classique" [level=2]
+  - paragraph: 59.99 €
+  - paragraph: "Stock : 120"
+  - button "Ajouter au panier"
+  - img "Pantalon de Travail Robuste"
+  - heading "Pantalon de Travail Robuste" [level=2]
+  - paragraph: 68.00 €
+  - paragraph: "Stock : 70"
+  - button "Ajouter au panier"
+  - img "Pantalon Cigarette Marine"
+  - heading "Pantalon Cigarette Marine" [level=2]
+  - paragraph: 72.00 €
+  - paragraph: "Stock : 85"
+  - button "Ajouter au panier"
+  - img "Pantalon de Sport Respirant Blanc"
+  - heading "Pantalon de Sport Respirant Blanc" [level=2]
+  - paragraph: 50.00 €
+  - paragraph: "Stock : 110"
+  - button "Ajouter au panier"
+```

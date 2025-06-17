@@ -20,10 +20,10 @@ export default function DeliveryPage() {
     if (!form.firstName) newErrors.firstName = "Prénom requis";
     if (!form.lastName) newErrors.lastName = "Nom requis";
     if (!form.address) newErrors.address = "Adresse requise";
-    if (!form.zip.match(/^\d{5}$/)) newErrors.zip = "Code postal invalide";
+    if (!/^\d{5}$/.test(form.zip)) newErrors.zip = "Code postal invalide";
     if (!form.city) newErrors.city = "Ville requise";
     if (!form.country) newErrors.country = "Pays requis";
-    if (!form.phone.match(/^\d{10}$/)) newErrors.phone = "Téléphone invalide";
+    if (!/^\d{10}$/.test(form.phone)) newErrors.phone = "Téléphone invalide";
     return newErrors;
   };
 
@@ -41,6 +41,7 @@ export default function DeliveryPage() {
   return (
     <form onSubmit={handleSubmit} className="p-6 space-y-4 max-w-lg mx-auto">
       <h2 className="text-2xl font-bold">Informations de livraison</h2>
+
       {Object.entries(form).map(([key, value]) => (
         <div key={key}>
           <input
@@ -53,9 +54,22 @@ export default function DeliveryPage() {
           {errors[key] && <p className="text-red-600">{errors[key]}</p>}
         </div>
       ))}
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-        Étape suivante
-      </button>
+
+      <div className="flex justify-between">
+        <button
+          type="button"
+          onClick={() => navigate("/panier")}
+          className="bg-gray-500 text-white px-4 py-2 rounded"
+        >
+          Étape précédente
+        </button>
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+        >
+          Étape suivante
+        </button>
+      </div>
     </form>
   );
 }

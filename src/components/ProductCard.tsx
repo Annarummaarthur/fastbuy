@@ -7,8 +7,13 @@ export default function ProductCard({ product }: { product: Product }) {
     const { addToCart } = useCart();
 
     const handleAdd = () => {
-      addToCart(product, 1);
+      if (product.stock >= 1) {
+        addToCart(product, 1);
+      } else {
+        alert("Produit en rupture de stock.");
+      }
     };
+
 
 
     return (

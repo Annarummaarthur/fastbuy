@@ -13,7 +13,9 @@ describe("ProductCard", () => {
     name: "Produit Test",
     price: 12.99,
     image: "test-image.jpg",
+    stock: 10, // <-- ajoute cette propriété
   };
+
 
   const addToCartMock = vi.fn(); 
 

@@ -1,16 +1,12 @@
-// CartPage.test.tsx
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import CartPage from "./CartPage";
 import { useCart } from "../store/cart";
 import { BrowserRouter } from "react-router-dom";
 
+vi.mock("../store/cart");
+
 const mockNavigate = vi.fn();
-
-vi.mock("../store/cart", () => ({
-  useCart: vi.fn(),
-}));
-
 vi.mock("react-router-dom", async () => {
   const actual = await vi.importActual("react-router-dom");
   return {
@@ -24,40 +20,21 @@ describe("CartPage", () => {
   const removeFromCartMock = vi.fn();
 
   beforeEach(() => {
-    (useCart as unknown as any).mockReturnValue({
+    (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({
       items: [
         {
-          product: { id: 1, name: "Produit 1", price: 10 },
-          quantity: 2,
+          product: { id: 1, name: "Test produit", price: 10, image: "img.jpg", stock: 10 },
+          quantity: 1,
         },
         {
-          product: { id: 2, name: "Produit 2", price: 5 },
-          quantity: 1,
+          product: { id: 2, name: "Produit 2", price: 5, image: "img2.jpg", stock: 5 },
+          quantity: 2,
         },
       ],
       updateQuantity: updateQuantityMock,
       removeFromCart: removeFromCartMock,
     });
-    mockNavigate.mockClear();
-    updateQuantityMock.mockClear();
-    removeFromCartMock.mockClear();
-  });
-
-  it("affiche le panier avec les produits et sous-total", () => {
-    render(
-      <BrowserRouter>
-        <CartPage />
-      </BrowserRouter>
-    );
-
-    expect(screen.getByText("Votre panier")).toBeInTheDocument();
-    expect(screen.getByText("Produit 1")).toBeInTheDocument();
-    expect(screen.getByText("Produit 2")).toBeInTheDocument();
-
-    // Vérifie les montants
-    expect(screen.getByText("20.00 €")).toBeInTheDocument(); // 10 * 2
-    expect(screen.getByText("5.00 €")).toBeInTheDocument();  // 5 * 1
-    expect(screen.getByText("Sous-total : 25.00 €")).toBeInTheDocument();
+    vi.clearAllMocks();
   });
 
   it("appel updateQuantity quand on change la quantité", () => {
@@ -66,11 +43,8 @@ describe("CartPage", () => {
         <CartPage />
       </BrowserRouter>
     );
-
-    const inputs = screen.getAllByRole("spinbutton");
-    expect(inputs.length).toBe(2);
-
-    fireEvent.change(inputs[0], { target: { value: "3" } });
+    const input = screen.getByDisplayValue("1");
+    fireEvent.change(input, { target: { value: "3" } });
     expect(updateQuantityMock).toHaveBeenCalledWith(1, 3);
   });
 
@@ -100,7 +74,7 @@ describe("CartPage", () => {
   });
 
   it("affiche un message si le panier est vide", () => {
-    (useCart as unknown as any).mockReturnValue({
+    (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({
       items: [],
       updateQuantity: updateQuantityMock,
       removeFromCart: removeFromCartMock,

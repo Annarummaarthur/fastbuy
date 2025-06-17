@@ -7,7 +7,10 @@ export default function PaymentPage() {
   const carrier = JSON.parse(sessionStorage.getItem("carrier") || "{}");
   const navigate = useNavigate();
 
-  const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const subtotal = items.reduce(
+    (sum, item) => sum + item.product.price * item.quantity,
+    0
+  );
   const total = subtotal + (carrier.price || 0);
 
   const handlePayment = () => {
@@ -25,6 +28,7 @@ export default function PaymentPage() {
   return (
     <div className="p-6 max-w-lg mx-auto space-y-4">
       <h2 className="text-2xl font-bold">Récapitulatif</h2>
+
       <ul>
         {items.map(({ product, quantity }) => (
           <li key={product.id}>
@@ -32,15 +36,33 @@ export default function PaymentPage() {
           </li>
         ))}
       </ul>
-      <p><strong>Livraison à :</strong> {delivery.address}, {delivery.zip} {delivery.city}</p>
-      <p><strong>Transporteur :</strong> {carrier.name} ({carrier.price.toFixed(2)} €)</p>
+
+      <p>
+        <strong>Livraison à :</strong> {delivery.address}, {delivery.zip}{" "}
+        {delivery.city}
+      </p>
+      <p>
+        <strong>Transporteur :</strong> {carrier.name} (
+        {carrier.price ? carrier.price.toFixed(2) : "0.00"} €)
+      </p>
+
       <p className="font-bold">Total : {total.toFixed(2)} €</p>
-      <button
-        onClick={handlePayment}
-        className="bg-green-600 text-white px-4 py-2 rounded"
-      >
-        Payer
-      </button>
+
+      <div className="flex justify-between">
+        <button
+          onClick={() => navigate("/transport")}
+          className="bg-gray-500 text-white px-4 py-2 rounded"
+        >
+          Étape précédente
+        </button>
+
+        <button
+          onClick={handlePayment}
+          className="bg-green-600 text-white px-4 py-2 rounded"
+        >
+          Payer
+        </button>
+      </div>
     </div>
   );
 }

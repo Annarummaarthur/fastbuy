@@ -43,9 +43,6 @@ test('Échec de commande : produit en rupture de stock après ajout au panier', 
 
   // Déclencher manuellement la boîte de dialogue via JS (à adapter selon ta logique métier)
   await page.evaluate(() => {
-    // Exemple hypothétique : appeler la fonction qui affiche le dialogue
-    // Remplace par la vraie fonction si possible ou simule un clic sur le bouton 'Ajouter au panier' 
-    // même s'il est désactivé en déclenchant l'événement manuellement
     const addBtn = document.querySelector('button:disabled');
     if (addBtn) {
       addBtn.dispatchEvent(new Event('click'));

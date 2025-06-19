@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../store/cart";
+import "./ShippingPage.css";
 
 type Carrier = {
   id: number;
@@ -15,15 +16,12 @@ export default function ShippingPage() {
   const navigate = useNavigate();
   const { items } = useCart();
 
-  // Calcul poids total panier (ex: poids unitaire * quantité)
   const totalWeight = items.reduce(
     (sum, item) => sum + (item.product.weight || 0) * item.quantity,
     0
   );
 
   useEffect(() => {
-    // Simuler appel API avec infos livraison & poids
-    // Ici juste un setTimeout pour simuler async
     setTimeout(() => {
       setCarriers([
         { id: 1, name: "Colissimo", price: 4.99, delay: "48h" },
@@ -47,16 +45,16 @@ export default function ShippingPage() {
   };
 
   return (
-    <div className="p-6 max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Choix du transporteur</h2>
-      <p>Poids total du panier : {totalWeight.toFixed(2)} kg</p>
+    <div className="shipping-container">
+      <h2 className="shipping-title">Choix du transporteur</h2>
+      <p className="shipping-weight">Poids total du panier : {totalWeight.toFixed(2)} kg</p>
 
-      {carriers.length === 0 && <p>Chargement des transporteurs...</p>}
+      {carriers.length === 0 && <p className="shipping-loading">Chargement des transporteurs...</p>}
 
       {carriers.map((carrier) => (
         <label
           key={carrier.id}
-          className="block mb-2 border p-2 rounded cursor-pointer"
+          className="shipping-option"
         >
           <input
             type="radio"
@@ -65,18 +63,18 @@ export default function ShippingPage() {
             checked={selected === carrier.id}
             onChange={() => setSelected(carrier.id)}
           />
-          <span className="ml-2">
+          <span>
             {carrier.name} — {carrier.price.toFixed(2)} € ({carrier.delay})
           </span>
         </label>
       ))}
 
-      <p className="font-bold mt-2">Total : {total.toFixed(2)} €</p>
+      <p className="shipping-total">Total : {total.toFixed(2)} €</p>
 
-      <div className="flex justify-between mt-4">
+      <div className="shipping-buttons">
         <button
           onClick={() => navigate("/livraison")}
-          className="bg-gray-500 text-white px-4 py-2 rounded"
+          className="shipping-button-back"
         >
           Étape précédente
         </button>
@@ -84,7 +82,7 @@ export default function ShippingPage() {
         <button
           onClick={handleNext}
           disabled={selected === null}
-          className="bg-blue-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
+          className="shipping-button-next"
         >
           Étape suivante
         </button>

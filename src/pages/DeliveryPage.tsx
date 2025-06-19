@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./DeliveryPage.css";
 
 export default function DeliveryPage() {
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    prenom: "",
+    nom: "",
     address: "",
-    zip: "",
-    city: "",
-    country: "",
-    phone: "",
+    cp: "",
+    ville: "",
+    pays: "",
+    numero: "",
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -17,13 +18,13 @@ export default function DeliveryPage() {
 
   const validate = () => {
     const newErrors: typeof errors = {};
-    if (!form.firstName) newErrors.firstName = "Prénom requis";
-    if (!form.lastName) newErrors.lastName = "Nom requis";
+    if (!form.prenom) newErrors.prenom = "Prénom requis";
+    if (!form.nom) newErrors.nom = "Nom requis";
     if (!form.address) newErrors.address = "Adresse requise";
-    if (!/^\d{5}$/.test(form.zip)) newErrors.zip = "Code postal invalide";
-    if (!form.city) newErrors.city = "Ville requise";
-    if (!form.country) newErrors.country = "Pays requis";
-    if (!/^\d{10}$/.test(form.phone)) newErrors.phone = "Téléphone invalide";
+    if (!/^\d{5}$/.test(form.cp)) newErrors.cp = "Code postal invalide";
+    if (!form.ville) newErrors.ville = "Ville requise";
+    if (!form.pays) newErrors.pays = "Pays requis";
+    if (!/^\d{10}$/.test(form.numero)) newErrors.numero = "Téléphone invalide";
     return newErrors;
   };
 
@@ -39,34 +40,31 @@ export default function DeliveryPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-6 space-y-4 max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold">Informations de livraison</h2>
+    <form onSubmit={handleSubmit} className="delivery-form">
+      <h2 className="delivery-title">Informations de livraison</h2>
 
       {Object.entries(form).map(([key, value]) => (
-        <div key={key}>
+        <div key={key} className="delivery-input-group">
           <input
             type="text"
             placeholder={key}
             value={value}
             onChange={(e) => setForm({ ...form, [key]: e.target.value })}
-            className="w-full p-2 border rounded"
+            className="delivery-input"
           />
-          {errors[key] && <p className="text-red-600">{errors[key]}</p>}
+          {errors[key] && <p className="delivery-error">{errors[key]}</p>}
         </div>
       ))}
 
-      <div className="flex justify-between">
+      <div className="delivery-buttons">
         <button
           type="button"
           onClick={() => navigate("/panier")}
-          className="bg-gray-500 text-white px-4 py-2 rounded"
+          className="delivery-button-back"
         >
           Étape précédente
         </button>
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
+        <button type="submit" className="delivery-button-submit">
           Étape suivante
         </button>
       </div>

@@ -1,5 +1,6 @@
 import { useCart } from "../store/cart";
 import { useNavigate } from "react-router-dom";
+import "./PaymentPage.css";
 
 export default function PaymentPage() {
   const { items, clearCart } = useCart();
@@ -26,10 +27,10 @@ export default function PaymentPage() {
   };
 
   return (
-    <div className="p-6 max-w-lg mx-auto space-y-4">
-      <h2 className="text-2xl font-bold">Récapitulatif</h2>
+    <div className="payment-container">
+      <h2 className="payment-title">Récapitulatif</h2>
 
-      <ul>
+      <ul className="payment-list">
         {items.map(({ product, quantity }) => (
           <li key={product.id}>
             {product.name} x{quantity} — {(product.price * quantity).toFixed(2)} €
@@ -37,28 +38,28 @@ export default function PaymentPage() {
         ))}
       </ul>
 
-      <p>
-        <strong>Livraison à :</strong> {delivery.address}, {delivery.zip}{" "}
-        {delivery.city}
+      <p className="payment-info">
+        <strong>Livraison à :</strong> {delivery.address}, {delivery.cp || delivery.zip}{" "}
+        {delivery.ville || delivery.city}
       </p>
-      <p>
+      <p className="payment-info">
         <strong>Transporteur :</strong> {carrier.name} (
         {carrier.price ? carrier.price.toFixed(2) : "0.00"} €)
       </p>
 
-      <p className="font-bold">Total : {total.toFixed(2)} €</p>
+      <p className="payment-total">Total : {total.toFixed(2)} €</p>
 
-      <div className="flex justify-between">
+      <div className="payment-buttons">
         <button
           onClick={() => navigate("/transport")}
-          className="bg-gray-500 text-white px-4 py-2 rounded"
+          className="payment-button-back"
         >
           Étape précédente
         </button>
 
         <button
           onClick={handlePayment}
-          className="bg-green-600 text-white px-4 py-2 rounded"
+          className="payment-button-pay"
         >
           Payer
         </button>

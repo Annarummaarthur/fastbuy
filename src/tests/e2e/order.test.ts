@@ -39,7 +39,6 @@ test('Parcours complet utilisateur', async ({ page }) => {
   await expect(continuerButton).toBeVisible();
   await continuerButton.click();
 
-  // ✅ Vérifie que l'on est bien sur la page de paiement
   await page.waitForURL('**/paiement', { timeout: 5000 });
   await expect(page.locator('text=Récapitulatif')).toBeVisible();
 
@@ -56,6 +55,5 @@ test('Parcours complet utilisateur', async ({ page }) => {
   await expect(payerButton).toBeVisible({ timeout: 5000 });
   await payerButton.click();
 
-  // Optionnel : vérifier que l'utilisateur est redirigé vers l'accueil
   await page.waitForURL('**/', { timeout: 5000 });
 });

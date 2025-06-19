@@ -8,7 +8,8 @@
       "price": 25,
       "currency": "EUR",
       "stock": 170,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_bio_blanc_1.jpg",
         "https://example.com/images/tshirt_bio_blanc_2.jpg"
@@ -22,7 +23,8 @@
       "price": 35.5,
       "currency": "EUR",
       "stock": 120,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_voyage_1.jpg",
         "https://example.com/images/tshirt_voyage_2.jpg"
@@ -36,7 +38,8 @@
       "price": 29.99,
       "currency": "EUR",
       "stock": 150,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_rayures_marines_1.jpg",
         "https://example.com/images/tshirt_rayures_marines_2.jpg"
@@ -50,7 +53,8 @@
       "price": 19,
       "currency": "EUR",
       "stock": 250,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_col_v_noir_1.jpg",
         "https://example.com/images/tshirt_col_v_noir_2.jpg"
@@ -64,7 +68,8 @@
       "price": 40,
       "currency": "EUR",
       "stock": 100,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_sport_1.jpg",
         "https://example.com/images/tshirt_sport_2.jpg"
@@ -78,7 +83,8 @@
       "price": 32,
       "currency": "EUR",
       "stock": 180,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_ml_gris_1.jpg",
         "https://example.com/images/tshirt_ml_gris_2.jpg"
@@ -92,7 +98,8 @@
       "price": 28.5,
       "currency": "EUR",
       "stock": 90,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_vintage_noir_1.jpg",
         "https://example.com/images/tshirt_vintage_noir_2.jpg"
@@ -106,7 +113,8 @@
       "price": 26,
       "currency": "EUR",
       "stock": 130,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_cotele_beige_1.jpg",
         "https://example.com/images/tshirt_cotele_beige_2.jpg"
@@ -120,7 +128,8 @@
       "price": 22,
       "currency": "EUR",
       "stock": 160,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_uni_vert_1.jpg",
         "https://example.com/images/tshirt_uni_vert_2.jpg"
@@ -134,7 +143,8 @@
       "price": 30,
       "currency": "EUR",
       "stock": 110,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_loose_blanc_1.jpg",
         "https://example.com/images/tshirt_loose_blanc_2.jpg"
@@ -148,7 +158,8 @@
       "price": 45,
       "currency": "EUR",
       "stock": 80,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_tie_dye_1.jpg",
         "https://example.com/images/tshirt_tie_dye_2.jpg"
@@ -162,7 +173,8 @@
       "price": 38,
       "currency": "EUR",
       "stock": 95,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_henley_1.jpg",
         "https://example.com/images/tshirt_henley_2.jpg"
@@ -176,7 +188,8 @@
       "price": 33,
       "currency": "EUR",
       "stock": 140,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_oversize_poche_1.jpg",
         "https://example.com/images/tshirt_oversize_poche_2.jpg"
@@ -190,7 +203,8 @@
       "price": 37,
       "currency": "EUR",
       "stock": 70,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_geometrique_1.jpg",
         "https://example.com/images/tshirt_geometrique_2.jpg"
@@ -204,7 +218,8 @@
       "price": 19,
       "currency": "EUR",
       "stock": 220,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_bleu_marine_1.jpg",
         "https://example.com/images/tshirt_bleu_marine_2.jpg"
@@ -218,7 +233,8 @@
       "price": 30,
       "currency": "EUR",
       "stock": 100,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_col_montant_1.jpg",
         "https://example.com/images/tshirt_col_montant_2.jpg"
@@ -232,7 +248,8 @@
       "price": 15,
       "currency": "EUR",
       "stock": 300,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_enfant_1.jpg",
         "https://example.com/images/tshirt_enfant_2.jpg"
@@ -246,7 +263,8 @@
       "price": 24,
       "currency": "EUR",
       "stock": 140,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_slim_kaki_1.jpg",
         "https://example.com/images/tshirt_slim_kaki_2.jpg"
@@ -260,7 +278,8 @@
       "price": 28,
       "currency": "EUR",
       "stock": 110,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_sl_sport_1.jpg",
         "https://example.com/images/tshirt_sl_sport_2.jpg"
@@ -274,7 +293,8 @@
       "price": 42,
       "currency": "EUR",
       "stock": 90,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_pima_1.jpg",
         "https://example.com/images/tshirt_pima_2.jpg"
@@ -288,7 +308,8 @@
       "price": 31,
       "currency": "EUR",
       "stock": 120,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_logo_brode_1.jpg",
         "https://example.com/images/tshirt_logo_brode_2.jpg"
@@ -302,7 +323,8 @@
       "price": 27,
       "currency": "EUR",
       "stock": 160,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_col_large_femme_1.jpg",
         "https://example.com/images/tshirt_col_large_femme_2.jpg"
@@ -316,7 +338,8 @@
       "price": 39,
       "currency": "EUR",
       "stock": 85,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_sechage_rapide_1.jpg",
         "https://example.com/images/tshirt_sechage_rapide_2.jpg"
@@ -330,7 +353,8 @@
       "price": 26,
       "currency": "EUR",
       "stock": 170,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_minimal_1.jpg",
         "https://example.com/images/tshirt_minimal_2.jpg"
@@ -344,7 +368,8 @@
       "price": 38,
       "currency": "EUR",
       "stock": 95,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_photo_ville_1.jpg",
         "https://example.com/images/tshirt_photo_ville_2.jpg"
@@ -358,7 +383,8 @@
       "price": 25,
       "currency": "EUR",
       "stock": 130,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_bio_jaune_1.jpg",
         "https://example.com/images/tshirt_bio_jaune_2.jpg"
@@ -372,7 +398,8 @@
       "price": 36,
       "currency": "EUR",
       "stock": 60,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_moto_1.jpg",
         "https://example.com/images/tshirt_moto_2.jpg"
@@ -386,7 +413,8 @@
       "price": 45,
       "currency": "EUR",
       "stock": 100,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_sans_coutures_1.jpg",
         "https://example.com/images/tshirt_sans_coutures_2.jpg"
@@ -400,7 +428,8 @@
       "price": 32,
       "currency": "EUR",
       "stock": 115,
-      "category": "t-shirt",
+            "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_boxy_creme_1.jpg",
         "https://example.com/images/tshirt_boxy_creme_2.jpg"
@@ -415,6 +444,7 @@
       "currency": "EUR",
       "stock": 90,
       "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_rayures_fines_1.jpg",
         "https://example.com/images/tshirt_rayures_fines_2.jpg"
@@ -429,6 +459,7 @@
       "currency": "EUR",
       "stock": 70,
       "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_brode_floral_1.jpg",
         "https://example.com/images/tshirt_brode_floral_2.jpg"
@@ -443,6 +474,7 @@
       "currency": "EUR",
       "stock": 80,
       "category": "t-shirt",
+      "weight": 200,
       "images": [
         "https://example.com/images/tshirt_run_leger_1.jpg",
         "https://example.com/images/tshirt_run_leger_2.jpg"
@@ -457,6 +489,7 @@
       "currency": "EUR",
       "stock": 110,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/chino_noir_stretch_1.jpg",
         "https://example.com/images/chino_noir_stretch_2.jpg"
@@ -471,6 +504,7 @@
       "currency": "EUR",
       "stock": 95,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/jean_gris_anthracite_1.jpg",
         "https://example.com/images/jean_gris_anthracite_2.jpg"
@@ -485,6 +519,7 @@
       "currency": "EUR",
       "stock": 160,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/jogging_gris_chine_1.jpg",
         "https://example.com/images/jogging_gris_chine_2.jpg"
@@ -499,6 +534,7 @@
       "currency": "EUR",
       "stock": 80,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/cargo_beige_leger_1.jpg",
         "https://example.com/images/cargo_beige_leger_2.jpg"
@@ -513,6 +549,7 @@
       "currency": "EUR",
       "stock": 55,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/costume_bleu_nuit_1.jpg",
         "https://example.com/images/costume_bleu_nuit_2.jpg"
@@ -527,6 +564,7 @@
       "currency": "EUR",
       "stock": 100,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/jean_droit_vintage_1.jpg",
         "https://example.com/images/jean_droit_vintage_2.jpg"
@@ -541,6 +579,7 @@
       "currency": "EUR",
       "stock": 125,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/lin_blanc_casse_1.jpg",
         "https://example.com/images/lin_blanc_casse_2.jpg"
@@ -555,6 +594,7 @@
       "currency": "EUR",
       "stock": 190,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/legging_taille_haute_1.jpg",
         "https://example.com/images/legging_taille_haute_2.jpg"
@@ -569,23 +609,10 @@
       "currency": "EUR",
       "stock": 70,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/velours_sapin_1.jpg",
         "https://example.com/images/velours_sapin_2.jpg"
-      ]
-    },
-    {
-      "id": "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
-      "name": "Jean Noir Ajusté",
-      "description_short": "Un basique polyvalent pour tous les looks.",
-      "description_long": "Ce jean noir ajusté est un essentiel de votre garde-robe. Facile à combiner, il s'adapte à toutes les occasions, du casual au chic.",
-      "price": 69,
-      "currency": "EUR",
-      "stock": 140,
-      "category": "pantalon",
-      "images": [
-        "https://example.com/images/jean_noir_ajuste_1.jpg",
-        "https://example.com/images/jean_noir_ajuste_2.jpg"
       ]
     },
     {
@@ -597,6 +624,7 @@
       "currency": "EUR",
       "stock": 60,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/randonnee_bleu_1.jpg",
         "https://example.com/images/randonnee_bleu_2.jpg"
@@ -611,6 +639,7 @@
       "currency": "EUR",
       "stock": 75,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/tailleur_femme_marine_1.jpg",
         "https://example.com/images/tailleur_femme_marine_2.jpg"
@@ -625,23 +654,10 @@
       "currency": "EUR",
       "stock": 40,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/simili_cuir_marron_1.jpg",
         "https://example.com/images/simili_cuir_marron_2.jpg"
-      ]
-    },
-    {
-      "id": "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
-      "name": "Pantalon Ample Fluide Noir",
-      "description_short": "Confort et fluidité pour un style décontracté.",
-      "description_long": "Ce pantalon ample et fluide en tissu léger est parfait pour un look élégant et décontracté, idéal pour les journées chaudes ou les soirées.",
-      "price": 52,
-      "currency": "EUR",
-      "stock": 105,
-      "category": "pantalon",
-      "images": [
-        "https://example.com/images/ample_fluide_noir_1.jpg",
-        "https://example.com/images/ample_fluide_noir_2.jpg"
       ]
     },
     {
@@ -653,37 +669,10 @@
       "currency": "EUR",
       "stock": 90,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/jean_skinny_taille_haute_1.jpg",
         "https://example.com/images/jean_skinny_taille_haute_2.jpg"
-      ]
-    },
-    {
-      "id": "7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
-      "name": "Pantalon Chino Blanc Cassé",
-      "description_short": "Idéal pour un look estival chic.",
-      "description_long": "Un chino blanc cassé, parfait pour les beaux jours. Sa coupe ajustée et sa couleur claire apportent une touche de fraîcheur à votre style.",
-      "price": 59.99,
-      "currency": "EUR",
-      "stock": 130,
-      "category": "pantalon",
-      "images": [
-        "https://example.com/images/chino_blanc_casse_1.jpg",
-        "https://example.com/images/chino_blanc_casse_2.jpg"
-      ]
-    },
-    {
-      "id": "9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e",
-      "name": "Pantalon de Pyjama Coton Rayé",
-      "description_short": "Douceur et détente pour la nuit.",
-      "description_long": "Ce pantalon de pyjama en coton doux et respirant est parfait pour des nuits confortables. Son motif rayé ajoute une touche classique.",
-      "price": 28,
-      "currency": "EUR",
-      "stock": 170,
-      "category": "pantalon",
-      "images": [
-        "https://example.com/images/pyjama_raye_1.jpg",
-        "https://example.com/images/pyjama_raye_2.jpg"
       ]
     },
     {
@@ -695,6 +684,7 @@
       "currency": "EUR",
       "stock": 35,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/snowboard_impermeable_1.jpg",
         "https://example.com/images/snowboard_impermeable_2.jpg"
@@ -709,6 +699,7 @@
       "currency": "EUR",
       "stock": 85,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/jean_mom_noir_1.jpg",
         "https://example.com/images/jean_mom_noir_2.jpg"
@@ -723,6 +714,7 @@
       "currency": "EUR",
       "stock": 60,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/golf_marine_stretch_1.jpg",
         "https://example.com/images/golf_marine_stretch_2.jpg"
@@ -737,6 +729,7 @@
       "currency": "EUR",
       "stock": 120,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/sport_fusele_1.jpg",
         "https://example.com/images/sport_fusele_2.jpg"
@@ -751,23 +744,10 @@
       "currency": "EUR",
       "stock": 45,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/soie_rose_1.jpg",
         "https://example.com/images/soie_rose_2.jpg"
-      ]
-    },
-    {
-      "id": "1d2e3f4a-5b6c-7d8e-9f0a-1b2c3d4e5f6g",
-      "name": "Jean Wide Leg Brut",
-      "description_short": "Coupe large et intemporelle pour un style décontracté.",
-      "description_long": "Le jean wide leg brut offre une silhouette décontractée et confortable. Sa coupe large est parfaite pour un look tendance et rétro.",
-      "price": 85,
-      "currency": "EUR",
-      "stock": 70,
-      "category": "pantalon",
-      "images": [
-        "https://example.com/images/jean_wide_leg_1.jpg",
-        "https://example.com/images/jean_wide_leg_2.jpg"
       ]
     },
     {
@@ -779,6 +759,7 @@
       "currency": "EUR",
       "stock": 150,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/yoga_confort_1.jpg",
         "https://example.com/images/yoga_confort_2.jpg"
@@ -793,6 +774,7 @@
       "currency": "EUR",
       "stock": 80,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/flanelle_carreaux_1.jpg",
         "https://example.com/images/flanelle_carreaux_2.jpg"
@@ -807,6 +789,7 @@
       "currency": "EUR",
       "stock": 65,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/cargo_noir_tech_1.jpg",
         "https://example.com/images/cargo_noir_tech_2.jpg"
@@ -821,6 +804,7 @@
       "currency": "EUR",
       "stock": 140,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/molleton_noir_1.jpg",
         "https://example.com/images/molleton_noir_2.jpg"
@@ -835,6 +819,7 @@
       "currency": "EUR",
       "stock": 90,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/pluie_leger_1.jpg",
         "https://example.com/images/pluie_leger_2.jpg"
@@ -849,6 +834,7 @@
       "currency": "EUR",
       "stock": 120,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/chino_kaki_classique_1.jpg",
         "https://example.com/images/chino_kaki_classique_2.jpg"
@@ -863,6 +849,7 @@
       "currency": "EUR",
       "stock": 70,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/travail_robuste_1.jpg",
         "https://example.com/images/travail_robuste_2.jpg"
@@ -877,6 +864,7 @@
       "currency": "EUR",
       "stock": 85,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/cigarette_marine_1.jpg",
         "https://example.com/images/cigarette_marine_2.jpg"
@@ -891,6 +879,7 @@
       "currency": "EUR",
       "stock": 110,
       "category": "pantalon",
+      "weight": 350,
       "images": [
         "https://example.com/images/sport_blanc_1.jpg",
         "https://example.com/images/sport_blanc_2.jpg"
@@ -904,6 +893,7 @@
       "service_type": "Livraison express (24h-48h)",
       "area_served": "National",
       "average_rating": 4.5,
+      "max-weight": 1,
       "contact_email": "contact@expressrapide.fr",
       "phone": "+33123456789",
       "tracking_url_template": "https://expressrapide.fr/suivi?id={tracking_number}",
@@ -919,6 +909,7 @@
       "service_type": "Fret international (maritime/aérien)",
       "area_served": "International",
       "average_rating": 4.2,
+      "max-weight": 2,
       "contact_email": "info@cargoglobal.com",
       "phone": "+12125550100",
       "tracking_url_template": "https://cargoglobal.com/track?ref={tracking_number}",
@@ -934,6 +925,7 @@
       "service_type": "Livraison urbaine (vélo/électrique)",
       "area_served": "Local (Grandes Villes)",
       "average_rating": 4.8,
+      "max-weight": 1,
       "contact_email": "support@ecocoursier.fr",
       "phone": "+33601020304",
       "tracking_url_template": "https://ecocoursier.fr/tracer?ref={tracking_number}",
@@ -949,6 +941,7 @@
       "service_type": "Livraison standard (3-5 jours)",
       "area_served": "National",
       "average_rating": 3.9,
+      "max-weight": 2.5,
       "contact_email": "aide@transportfacile.fr",
       "phone": "+33987654321",
       "tracking_url_template": "https://transportfacile.fr/tracking/{tracking_number}",
@@ -964,6 +957,7 @@
       "service_type": "Livraison Premium (J+1 avant 10h)",
       "area_served": "National / Europe",
       "average_rating": 4.7,
+      "max-weight": 10,
       "contact_email": "serviceclient@premiumexpress.eu",
       "phone": "+33711223344",
       "tracking_url_template": "https://premiumexpress.eu/suivi-colis?id={tracking_number}",
@@ -979,6 +973,7 @@
       "service_type": "Livraison de produits fragiles/spéciaux",
       "area_served": "Régional",
       "average_rating": 4.6,
+      "max-weight": 12,
       "contact_email": "contact@artisanlivraison.com",
       "phone": "+33500112233",
       "tracking_url_template": "https://artisanlivraison.com/suivi/{tracking_number}",
@@ -994,6 +989,7 @@
       "service_type": "Livraison en point relais",
       "area_served": "National",
       "average_rating": 4.3,
+      "max-weight": 23,
       "contact_email": "partenaires@relaisproximite.fr",
       "phone": "+33890123456",
       "tracking_url_template": "https://relaisproximite.fr/trouver-colis/{tracking_number}",
@@ -1002,51 +998,6 @@
         "Retrait facile",
         "Flexibilité des horaires"
       ]
-    },
-    {
-      "id": "trk008",
-      "name": "Logistique Urbaine",
-      "service_type": "Logistique dernier kilomètre",
-      "area_served": "Métropoles",
-      "average_rating": 4.1,
-      "contact_email": "info@logistiqueurbaine.fr",
-      "phone": "+33455667788",
-      "tracking_url_template": "https://logistiqueurbaine.fr/trace/{tracking_number}",
-      "features": [
-        "Optimisation des tournées",
-        "Flotte moderne",
-        "Solutions B2B"
-      ]
-    },
-    {
-      "id": "trk009",
-      "name": "Global Express Freight",
-      "service_type": "Fret express international",
-      "area_served": "Mondial",
-      "average_rating": 4.4,
-      "contact_email": "sales@globalexpressfreight.com",
-      "phone": "+442071234567",
-      "tracking_url_template": "https://gef.com/track/{tracking_number}",
-      "features": [
-        "Livraison en urgence",
-        "Services douaniers intégrés",
-        "Porte-à-porte international"
-      ]
-    },
-    {
-      "id": "trk010",
-      "name": "La Poste Locale",
-      "service_type": "Courrier et petits colis",
-      "area_served": "National / Local",
-      "average_rating": 3.7,
-      "contact_email": "contact@lapostelocale.fr",
-      "phone": "+33200112233",
-      "tracking_url_template": "https://lapostelocale.fr/mon-colis/{tracking_number}",
-      "features": [
-        "Couverture universelle",
-        "Services postaux traditionnels",
-        "Boîtes aux lettres"
-      ]
     }
   ],
   "payments": [
@@ -1054,7 +1005,6 @@
       "id": "pay001",
       "order_id": "ord78901234",
       "customer_id": "cust101",
-      "amount": 75.5,
       "currency": "EUR",
       "method": "Carte Bancaire",
       "status": "completed",
@@ -1066,7 +1016,6 @@
       "id": "pay002",
       "order_id": "ord78901235",
       "customer_id": "cust102",
-      "amount": 120,
       "currency": "EUR",
       "method": "PayPal",
       "status": "pending",
@@ -1075,22 +1024,8 @@
       "notes": "L'utilisateur doit valider le paiement sur l'interface PayPal."
     },
     {
-      "id": "pay003",
-      "order_id": "ord78901236",
-      "customer_id": "cust103",
-      "amount": 30.25,
-      "currency": "EUR",
-      "method": "Carte Bancaire",
-      "status": "failed",
-      "transaction_date": "2025-06-09T14:40:00Z",
-      "processor_response": "Refusé par l'émetteur de la carte (fonds insuffisants).",
-      "notes": "Échec du paiement. Client à contacter ou inviter à réessayer."
-    },
-    {
       "id": "pay004",
       "order_id": "ord78901237",
-      "customer_id": "cust104",
-      "amount": 200,
       "currency": "EUR",
       "method": "Virement Bancaire",
       "status": "initiated",
@@ -1102,73 +1037,12 @@
       "id": "pay005",
       "order_id": "ord78901238",
       "customer_id": "cust105",
-      "amount": 55.99,
       "currency": "EUR",
       "method": "Apple Pay",
       "status": "completed",
       "transaction_date": "2025-06-09T14:50:00Z",
       "processor_response": "Paiement Apple Pay confirmé.",
       "notes": "Transaction réussie, notification envoyée au client."
-    },
-    {
-      "id": "pay006",
-      "order_id": "ord78901239",
-      "customer_id": "cust101",
-      "amount": 75.5,
-      "currency": "EUR",
-      "method": "Carte Bancaire",
-      "status": "refunded",
-      "transaction_date": "2025-06-09T15:00:00Z",
-      "processor_response": "Remboursement initié.",
-      "notes": "Remboursement total du paiement initial pay001 suite à une annulation de commande."
-    },
-    {
-      "id": "pay007",
-      "order_id": "ord78901240",
-      "customer_id": "cust106",
-      "amount": 88.7,
-      "currency": "EUR",
-      "method": "Google Pay",
-      "status": "completed",
-      "transaction_date": "2025-06-10T09:10:00Z",
-      "processor_response": "Paiement Google Pay confirmé.",
-      "notes": "Paiement mobile réussi, commande en préparation."
-    },
-    {
-      "id": "pay008",
-      "order_id": "ord78901241",
-      "customer_id": "cust107",
-      "amount": 45,
-      "currency": "EUR",
-      "method": "Carte Bancaire",
-      "status": "failed",
-      "transaction_date": "2025-06-10T09:15:30Z",
-      "processor_response": "Erreur technique du processeur de paiement.",
-      "notes": "Échec non lié aux fonds, possiblement un problème de réseau. Réessayer plus tard."
-    },
-    {
-      "id": "pay009",
-      "order_id": "ord78901242",
-      "customer_id": "cust108",
-      "amount": 15,
-      "currency": "EUR",
-      "method": "Prélèvement SEPA",
-      "status": "pending_authorization",
-      "transaction_date": "2025-06-10T09:20:00Z",
-      "processor_response": "Mandat SEPA en attente de validation.",
-      "notes": "Le prélèvement sera effectué dans les prochains jours ouvrés."
-    },
-    {
-      "id": "pay010",
-      "order_id": "ord78901243",
-      "customer_id": "cust109",
-      "amount": 350,
-      "currency": "EUR",
-      "method": "Stripe",
-      "status": "completed",
-      "transaction_date": "2025-06-10T09:25:00Z",
-      "processor_response": "Paiement Stripe capturé avec succès.",
-      "notes": "Grosse commande traitée via Stripe."
     }
   ]
 }

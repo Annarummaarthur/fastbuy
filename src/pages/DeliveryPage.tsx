@@ -4,13 +4,13 @@ import "./DeliveryPage.css";
 
 export default function DeliveryPage() {
   const [form, setForm] = useState({
-    prenom: "",
-    nom: "",
+    firstName: "",
+    lastName: "",
     address: "",
-    cp: "",
-    ville: "",
-    pays: "",
-    numero: "",
+    zip: "",
+    city: "",
+    country: "",
+    phone: "",
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -18,13 +18,13 @@ export default function DeliveryPage() {
 
   const validate = () => {
     const newErrors: typeof errors = {};
-    if (!form.prenom) newErrors.prenom = "Prénom requis";
-    if (!form.nom) newErrors.nom = "Nom requis";
+    if (!form.firstName) newErrors.firstName = "Prénom requis";
+    if (!form.lastName) newErrors.lastName = "Nom requis";
     if (!form.address) newErrors.address = "Adresse requise";
-    if (!/^\d{5}$/.test(form.cp)) newErrors.cp = "Code postal invalide";
-    if (!form.ville) newErrors.ville = "Ville requise";
-    if (!form.pays) newErrors.pays = "Pays requis";
-    if (!/^\d{10}$/.test(form.numero)) newErrors.numero = "Téléphone invalide";
+    if (!/^\d{5}$/.test(form.zip)) newErrors.zip = "Code postal invalide";
+    if (!form.city) newErrors.city = "Ville requise";
+    if (!form.country) newErrors.country = "Pays requis";
+    if (!/^\d{10}$/.test(form.phone)) newErrors.phone = "Téléphone invalide";
     return newErrors;
   };
 

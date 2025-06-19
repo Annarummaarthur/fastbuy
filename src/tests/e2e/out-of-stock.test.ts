@@ -8,7 +8,7 @@ test('Échec de commande : produit en rupture de stock après ajout au panier', 
   const addButton = productCard.locator('button:has-text("Ajouter au panier")');
 
   const stockText = await productCard.locator('text=Stock :').innerText();
-  console.log('Stock affiché:', stockText);
+  // console.log('Stock affiché:', stockText);
   const stockInitial = Number(stockText.replace('Stock : ', '').trim());
 
   // Ajouter le produit en totalité pour vider le stock

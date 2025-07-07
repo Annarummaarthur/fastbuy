@@ -71,7 +71,7 @@ describe("PaymentPage", () => {
   });
 
   it("réussit le paiement, affiche alert, vide le panier et navigue à la page d'accueil", () => {
-    vi.spyOn(Math, "random").mockReturnValue(0.9); // succès (>0.2)
+    vi.spyOn(Math, "random").mockReturnValue(0.9);
 
     render(
       <BrowserRouter>

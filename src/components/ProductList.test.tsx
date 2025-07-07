@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import ProductList from "../components/ProductList";
+import ProductList from "./ProductList";
 import * as api from "../api/products";
 import { BrowserRouter } from "react-router-dom";
 

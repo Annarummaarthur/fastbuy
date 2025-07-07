@@ -43,7 +43,7 @@ test('Parcours complet utilisateur', async ({ page }) => {
   await expect(page.locator('text=Récapitulatif')).toBeVisible();
 
   const totalText = await page.locator('p.payment-total').innerText();
-  // console.log('Prix livraison affiché:', totalText);
+  
   expect(totalText).toMatch(/^Total\s?:\s?\d+(\.\d{1,2})? €$/);
 
   page.once('dialog', async dialog => {

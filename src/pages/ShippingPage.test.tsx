@@ -1,4 +1,3 @@
-// ShippingPage.test.tsx
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import ShippingPage from "./ShippingPage";
@@ -41,7 +40,6 @@ describe("ShippingPage", () => {
     expect(screen.getByText(/Poids total du panier : 2.00 kg/)).toBeInTheDocument();
     expect(screen.getByText("Chargement des transporteurs...")).toBeInTheDocument();
 
-    // Attendre le chargement des transporteurs (après 300ms timeout)
     await waitFor(() => {
       expect(screen.getByLabelText(/Colissimo/)).toBeInTheDocument();
       expect(screen.getByLabelText(/Chronopost/)).toBeInTheDocument();
@@ -55,7 +53,6 @@ describe("ShippingPage", () => {
       </BrowserRouter>
     );
 
-    // Attendre le chargement des transporteurs
     await waitFor(() => {
       expect(screen.getByLabelText(/Colissimo/)).toBeInTheDocument();
     });
@@ -63,15 +60,12 @@ describe("ShippingPage", () => {
     const colissimoRadio = screen.getByLabelText(/Colissimo/) as HTMLInputElement;
     const nextButton = screen.getByText("Étape suivante") as HTMLButtonElement;
 
-    // Initialement bouton désactivé
     expect(nextButton).toBeDisabled();
 
-    // Sélectionner Colissimo
     fireEvent.click(colissimoRadio);
     expect(colissimoRadio.checked).toBe(true);
     expect(nextButton).toBeEnabled();
 
-    // Le total inclut le prix du transporteur (10*2 + 5*1 + 4.99)
     expect(screen.getByText("Total : 29.99 €")).toBeInTheDocument();
   });
 
@@ -93,21 +87,17 @@ describe("ShippingPage", () => {
       </BrowserRouter>
     );
 
-    // Attendre le chargement des transporteurs
     await waitFor(() => screen.getByLabelText(/Colissimo/));
 
-    // Sélectionner Chronopost
     const chronopostRadio = screen.getByLabelText(/Chronopost/) as HTMLInputElement;
     fireEvent.click(chronopostRadio);
 
     fireEvent.click(screen.getByText("Étape suivante"));
 
-    // Vérifier sessionStorage
     const storedCarrier = JSON.parse(sessionStorage.getItem("carrier") || "{}");
     expect(storedCarrier.name).toBe("Chronopost");
     expect(storedCarrier.price).toBe(9.99);
 
-    // Navigation vers paiement
     expect(navigateMock).toHaveBeenCalledWith("/paiement");
   });
 
@@ -118,7 +108,6 @@ describe("ShippingPage", () => {
       </BrowserRouter>
     );
 
-    // Attendre le chargement des transporteurs
     await waitFor(() => screen.getByLabelText(/Colissimo/));
 
     const nextButton = screen.getByText("Étape suivante") as HTMLButtonElement;

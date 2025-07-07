@@ -3,6 +3,6 @@ export type Product = {
   name: string;
   price: number;
   image: string;
-  stock: number;    // Quantité dispo en stock
-  weight?: number;  // Poids unitaire optionnel (kg ou g)
+  stock: number;
+  weight?: number;
 };

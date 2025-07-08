@@ -15,22 +15,30 @@ vi.mock("react-router-dom", async () => {
   };
 });
 
+type CartItem = {
+  product: { id: number; name: string; price: number; image: string; stock: number };
+  quantity: number;
+};
+
 describe("CartPage", () => {
   const updateQuantityMock = vi.fn();
   const removeFromCartMock = vi.fn();
 
+  // Données dynamiques pour les tests
+  const items: CartItem[] = [
+    {
+      product: { id: 1, name: "Test produit", price: 10, image: "img.jpg", stock: 10 },
+      quantity: 1,
+    },
+    {
+      product: { id: 2, name: "Produit 2", price: 5, image: "img2.jpg", stock: 5 },
+      quantity: 2,
+    },
+  ];
+
   beforeEach(() => {
     (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({
-      items: [
-        {
-          product: { id: 1, name: "Test produit", price: 10, image: "img.jpg", stock: 10 },
-          quantity: 1,
-        },
-        {
-          product: { id: 2, name: "Produit 2", price: 5, image: "img2.jpg", stock: 5 },
-          quantity: 2,
-        },
-      ],
+      items,
       updateQuantity: updateQuantityMock,
       removeFromCart: removeFromCartMock,
     });
@@ -43,9 +51,15 @@ describe("CartPage", () => {
         <CartPage />
       </BrowserRouter>
     );
-    const input = screen.getByDisplayValue("1");
-    fireEvent.change(input, { target: { value: "3" } });
-    expect(updateQuantityMock).toHaveBeenCalledWith(1, 3);
+
+    items.forEach(({ quantity }, index) => {
+      const input = screen.getAllByRole("spinbutton")[index];
+      const newQuantity = quantity + 2;
+
+      fireEvent.change(input, { target: { value: String(newQuantity) } });
+
+      expect(updateQuantityMock).toHaveBeenCalledWith(items[index].product.id, newQuantity);
+    });
   });
 
   it("appel removeFromCart quand on clique sur supprimer", () => {
@@ -55,11 +69,14 @@ describe("CartPage", () => {
       </BrowserRouter>
     );
 
-    const btns = screen.getAllByText("Supprimer");
-    expect(btns.length).toBe(2);
+    const buttons = screen.getAllByText("Supprimer");
+    expect(buttons.length).toBe(items.length);
 
-    fireEvent.click(btns[0]);
-    expect(removeFromCartMock).toHaveBeenCalledWith(1);
+    buttons.forEach((btn, index) => {
+      fireEvent.click(btn);
+      expect(removeFromCartMock).toHaveBeenCalledWith(items[index].product.id);
+      removeFromCartMock.mockClear(); // Reset mock pour le test propre de chaque clic
+    });
   });
 
   it("navigue vers la page produits quand on clique sur le bouton", () => {

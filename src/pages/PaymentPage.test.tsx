@@ -15,34 +15,43 @@ vi.mock("react-router-dom", async () => {
   };
 });
 
+type CartItem = {
+  product: { id: number; name: string; price: number };
+  quantity: number;
+};
+
 describe("PaymentPage", () => {
   const clearCartMock = vi.fn();
   const navigateMock = vi.fn();
 
+  const items: CartItem[] = [
+    { product: { id: 1, name: "Produit 1", price: 10 }, quantity: 2 },
+    { product: { id: 2, name: "Produit 2", price: 5 }, quantity: 1 },
+  ];
+
+  const delivery = { address: "123 Rue", zip: "75000", city: "Paris" };
+  const carrier = { name: "DHL", price: 7 };
+
+  const getProductTotal = (items: CartItem[]) =>
+    items.reduce((total, item) => total + item.product.price * item.quantity, 0);
+
+  const getTotal = (items: CartItem[], carrierPrice: number) =>
+    (getProductTotal(items) + carrierPrice).toFixed(2);
+
   beforeEach(() => {
     (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({
-      items: [
-        { product: { id: 1, name: "Produit 1", price: 10 }, quantity: 2 },
-        { product: { id: 2, name: "Produit 2", price: 5 }, quantity: 1 },
-      ],
+      items,
       clearCart: clearCartMock,
     });
 
-    sessionStorage.setItem(
-      "delivery",
-      JSON.stringify({ address: "123 Rue", zip: "75000", city: "Paris" })
-    );
-    sessionStorage.setItem(
-      "carrier",
-      JSON.stringify({ name: "DHL", price: 7 })
-    );
+    sessionStorage.setItem("delivery", JSON.stringify(delivery));
+    sessionStorage.setItem("carrier", JSON.stringify(carrier));
 
     (reactRouterDom.useNavigate as ReturnType<typeof vi.fn>).mockReturnValue(navigateMock);
 
     vi.clearAllMocks();
     vi.spyOn(window, "alert").mockImplementation(() => {});
   });
-
 
   it("affiche les produits, livraison, transporteur et total", () => {
     render(
@@ -51,11 +60,22 @@ describe("PaymentPage", () => {
       </BrowserRouter>
     );
 
-    expect(screen.getByText("Produit 1 x2 — 20.00 €")).toBeInTheDocument();
-    expect(screen.getByText("Produit 2 x1 — 5.00 €")).toBeInTheDocument();
-    expect(screen.getByText(/123 Rue, 75000 Paris/)).toBeInTheDocument();
-    expect(screen.getByText(/DHL \(7.00 €\)/)).toBeInTheDocument();
-    expect(screen.getByText("Total : 32.00 €")).toBeInTheDocument(); // 20 + 5 + 7
+    items.forEach(({ product, quantity }) => {
+      const totalPrice = (product.price * quantity).toFixed(2);
+      expect(
+        screen.getByText(`${product.name} x${quantity} — ${totalPrice} €`)
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.getByText(new RegExp(`${delivery.address}, ${delivery.zip} ${delivery.city}`))
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(new RegExp(`${carrier.name} \\(${carrier.price.toFixed(2)} €\\)`))
+    ).toBeInTheDocument();
+
+    expect(screen.getByText(`Total : ${getTotal(items, carrier.price)} €`)).toBeInTheDocument();
   });
 
   it("navigue à la page transport au clic sur Étape précédente", () => {
@@ -86,7 +106,7 @@ describe("PaymentPage", () => {
   });
 
   it("échoue le paiement et affiche alert", () => {
-    vi.spyOn(Math, "random").mockReturnValue(0.1); // échec (<=0.2)
+    vi.spyOn(Math, "random").mockReturnValue(0.1);
 
     render(
       <BrowserRouter>

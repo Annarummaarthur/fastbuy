@@ -13,11 +13,10 @@ describe("ProductCard", () => {
     name: "Produit Test",
     price: 12.99,
     image: "test-image.jpg",
-    stock: 10, // <-- ajoute cette propriété
+    stock: 10,
   };
 
-
-  const addToCartMock = vi.fn(); 
+  const addToCartMock = vi.fn();
 
   beforeEach(() => {
     (useCart as unknown as any).mockReturnValue({
@@ -28,12 +27,12 @@ describe("ProductCard", () => {
   afterEach(() => {
     vi.clearAllMocks();
   });
- 
+
   it("affiche les informations du produit", () => {
     render(<ProductCard product={product} />);
-    expect(screen.getByText("Produit Test")).toBeInTheDocument();
-    expect(screen.getByText("12.99 €")).toBeInTheDocument();
-    expect(screen.getByRole("img")).toHaveAttribute("src", "test-image.jpg");
+    expect(screen.getByText(product.name)).toBeInTheDocument();
+    expect(screen.getByText(`${product.price} €`)).toBeInTheDocument();
+    expect(screen.getByRole("img")).toHaveAttribute("src", product.image);
   });
 
   it("ajoute le produit au panier au clic sur le bouton", () => {

@@ -46,8 +46,9 @@ describe("ProductList", () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText("Produit 1")).toBeInTheDocument();
-      expect(screen.getByText("Produit 2")).toBeInTheDocument();
+      mockProducts.forEach(product => {
+        expect(screen.getByText(product.name)).toBeInTheDocument();
+      });
     });
   });
 
@@ -58,7 +59,7 @@ describe("ProductList", () => {
       </BrowserRouter>
     );
 
-    await waitFor(() => screen.getByText("Produit 1"));
+    await waitFor(() => screen.getByText(mockProducts[0].name));
 
     fireEvent.click(screen.getByText(/Voir le panier/i));
     expect(mockNavigate).toHaveBeenCalledWith("/panier");

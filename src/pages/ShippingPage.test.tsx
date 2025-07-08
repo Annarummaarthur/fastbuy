@@ -20,6 +20,21 @@ type CartItem = {
   quantity: number;
 };
 
+// Fonction extraite pour test unitaire
+export const getExpectedWeight = (items: CartItem[]) =>
+  items.reduce((total, item) => total + item.product.weight * item.quantity, 0).toFixed(2);
+
+describe("Fonction getExpectedWeight", () => {
+  it("calcule correctement le poids total avec 2 décimales", () => {
+    const items: CartItem[] = [
+      { product: { id: 1, name: "P1", price: 10, weight: 0.567 }, quantity: 2 },
+      { product: { id: 2, name: "P2", price: 5, weight: 1.123 }, quantity: 1 },
+    ];
+    // 0.567*2 + 1.123*1 = 2.257 => arrondi à 2.26
+    expect(getExpectedWeight(items)).toBe("2.26");
+  });
+});
+
 describe("ShippingPage", () => {
   const navigateMock = vi.fn();
 
@@ -27,9 +42,6 @@ describe("ShippingPage", () => {
     { product: { id: 1, name: "Produit 1", price: 10, weight: 0.5 }, quantity: 2 },
     { product: { id: 2, name: "Produit 2", price: 5, weight: 1 }, quantity: 1 },
   ];
-
-  const getExpectedWeight = (items: CartItem[]) =>
-    items.reduce((total, item) => total + item.product.weight * item.quantity, 0).toFixed(2);
 
   const getProductTotal = (items: CartItem[]) =>
     items.reduce((total, item) => total + item.product.price * item.quantity, 0).toFixed(2);
@@ -59,6 +71,25 @@ describe("ShippingPage", () => {
       expect(screen.getByLabelText(/Colissimo/)).toBeInTheDocument();
       expect(screen.getByLabelText(/Chronopost/)).toBeInTheDocument();
     });
+  });
+
+  it("affiche le total avec un prix formaté à 2 décimales et symbole €", async () => {
+    render(
+      <BrowserRouter>
+        <ShippingPage />
+      </BrowserRouter>
+    );
+
+    await waitFor(() => screen.getByLabelText(/Colissimo/));
+
+    fireEvent.click(screen.getByLabelText(/Colissimo/));
+
+    const productTotal = getProductTotal(items);
+    const totalWithShipping = getTotalWithShipping(productTotal, 4.99);
+
+    expect(screen.getByText(`Total : ${totalWithShipping} €`)).toBeInTheDocument();
+
+    expect(totalWithShipping).toMatch(/^\d+\.\d{2}$/);
   });
 
   it("permet de sélectionner un transporteur et active le bouton", async () => {

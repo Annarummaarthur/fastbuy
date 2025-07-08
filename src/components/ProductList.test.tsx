@@ -64,4 +64,32 @@ describe("ProductList", () => {
     fireEvent.click(screen.getByText(/Voir le panier/i));
     expect(mockNavigate).toHaveBeenCalledWith("/panier");
   });
+
+  it("filtre la liste des produits en fonction de la recherche", async () => {
+    render(
+      <BrowserRouter>
+        <ProductList />
+      </BrowserRouter>
+    );
+
+    await waitFor(() => screen.getByText(mockProducts[0].name));
+
+    const searchInput = screen.getByPlaceholderText(/Rechercher un produit/i);
+    expect(searchInput).toBeInTheDocument();
+
+    fireEvent.change(searchInput, { target: { value: "Produit 1" } });
+
+    expect(screen.getByText("Produit 1")).toBeInTheDocument();
+    expect(screen.queryByText("Produit 2")).not.toBeInTheDocument();
+
+    fireEvent.change(searchInput, { target: { value: "Produit inconnu" } });
+ 
+    expect(screen.queryByText("Produit 1")).not.toBeInTheDocument();
+    expect(screen.queryByText("Produit 2")).not.toBeInTheDocument();
+    expect(screen.getByText("Aucun produit trouvé.")).toBeInTheDocument();
+
+    fireEvent.change(searchInput, { target: { value: "" } });
+    expect(screen.getByText("Produit 1")).toBeInTheDocument();
+    expect(screen.getByText("Produit 2")).toBeInTheDocument();
+  });
 });

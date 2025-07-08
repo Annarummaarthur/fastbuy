@@ -15,19 +15,33 @@ vi.mock("react-router-dom", async () => {
   };
 });
 
+type CartItem = {
+  product: { id: number; name: string; price: number; weight: number };
+  quantity: number;
+};
+
 describe("ShippingPage", () => {
   const navigateMock = vi.fn();
 
-  beforeEach(() => {
-    (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({
-      items: [
-        { product: { id: 1, name: "Produit 1", price: 10, weight: 0.5 }, quantity: 2 },
-        { product: { id: 2, name: "Produit 2", price: 5, weight: 1 }, quantity: 1 },
-      ],
-    });
+  const items: CartItem[] = [
+    { product: { id: 1, name: "Produit 1", price: 10, weight: 0.5 }, quantity: 2 },
+    { product: { id: 2, name: "Produit 2", price: 5, weight: 1 }, quantity: 1 },
+  ];
 
+  const getExpectedWeight = (items: CartItem[]) =>
+    items.reduce((total, item) => total + item.product.weight * item.quantity, 0).toFixed(2);
+
+  const getProductTotal = (items: CartItem[]) =>
+    items.reduce((total, item) => total + item.product.price * item.quantity, 0).toFixed(2);
+
+  const getTotalWithShipping = (productTotal: string, shippingCost: number) =>
+    (parseFloat(productTotal) + shippingCost).toFixed(2);
+
+  beforeEach(() => {
+    (useCart as unknown as ReturnType<typeof vi.fn>).mockReturnValue({ items });
     (reactRouterDom.useNavigate as ReturnType<typeof vi.fn>).mockReturnValue(navigateMock);
     vi.clearAllMocks();
+    sessionStorage.clear();
   });
 
   it("affiche le poids total et les transporteurs après chargement", async () => {
@@ -37,7 +51,8 @@ describe("ShippingPage", () => {
       </BrowserRouter>
     );
 
-    expect(screen.getByText(/Poids total du panier : 2.00 kg/)).toBeInTheDocument();
+    const expectedWeight = getExpectedWeight(items);
+    expect(screen.getByText(`Poids total du panier : ${expectedWeight} kg`)).toBeInTheDocument();
     expect(screen.getByText("Chargement des transporteurs...")).toBeInTheDocument();
 
     await waitFor(() => {
@@ -66,7 +81,10 @@ describe("ShippingPage", () => {
     expect(colissimoRadio.checked).toBe(true);
     expect(nextButton).toBeEnabled();
 
-    expect(screen.getByText("Total : 29.99 €")).toBeInTheDocument();
+    const productTotal = getProductTotal(items);
+    const totalWithShipping = getTotalWithShipping(productTotal, 4.99);
+
+    expect(screen.getByText(`Total : ${totalWithShipping} €`)).toBeInTheDocument();
   });
 
   it("navigue vers /livraison au clic sur Étape précédente", async () => {
@@ -87,7 +105,7 @@ describe("ShippingPage", () => {
       </BrowserRouter>
     );
 
-    await waitFor(() => screen.getByLabelText(/Colissimo/));
+    await waitFor(() => screen.getByLabelText(/Chronopost/));
 
     const chronopostRadio = screen.getByLabelText(/Chronopost/) as HTMLInputElement;
     fireEvent.click(chronopostRadio);

@@ -44,7 +44,7 @@ export default function ProductList() {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
-          ))
+          )) 
         ) : (
           <p>Aucun produit trouvé.</p>
         )}
